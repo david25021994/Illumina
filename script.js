@@ -1,39 +1,34 @@
-const pupille = document.getElementById('pupille');
+// 1. Das Formular im HTML finden
+const meinFormular = document.querySelector('.contact-form');
 
-document.addEventListener('mousemove', (e) => {
-    // 1. Position der Maus holen
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+// 2. Den "Senden"-Event abfangen
+meinFormular.addEventListener('submit', async function(event) {
+    event.preventDefault(); // Stoppt das Neuladen der Seite
 
-    // 2. Mittelpunkt des Auges finden
-    const auge = document.querySelector('.auge');
-    const rekt = auge.getBoundingClientRect();
-    const augeX = rekt.left + rekt.width / 2;
-    const augeY = rekt.top + rekt.height / 2;
+    // Die eingegebenen Daten (Name, E-Mail, Nachricht) einsammeln
+    const formData = new FormData(event.target);
 
-    // 3. GEO-LOGIK: Winkel berechnen
-    // Wir berechnen den Winkel zwischen Maus und Auge in Radiant
-    const winkel = Math.atan2(mouseY - augeY, mouseX - augeX);
-    
-    // 4. GEO-LOGIK: Distanz festlegen
-    // Wie weit darf die Pupille von der Mitte weg? (Radius)
-    const distanz = 30; 
-    
-    // 5. Den Winkel zurück in X- und Y-Koordinaten umwandeln
-    const x = Math.cos(winkel) * distanz;
-    const y = Math.sin(winkel) * distanz;
+    // Der "Funkspruch" an Formspree
+    const response = await fetch(event.target.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
 
-    // 6. Die Pupille bewegen
-    pupille.style.transform = `translate(${x}px, ${y}px)`;
-});
-// Hier holen wir uns das Auge nochmal für den Klick (außerhalb der Mausbewegung)
-const dasGanzeAuge = document.querySelector('.auge');
-
-dasGanzeAuge.addEventListener('click', () => {
-    // Die Pupille (die du oben schon mit getElementById geholt hast) wird rot
-    pupille.style.backgroundColor = 'red';
-    
-    setTimeout(() => {
-        pupille.style.backgroundColor = '#333';
-    }, 200);
+    // 3. Checken, ob der Funkspruch angekommen ist
+    if (response.ok) {
+        // Erfolg! Wir zeigen die Bestätigung
+        meinFormular.innerHTML = `
+            <div style="text-align: center; padding: 40px; border: 1px solid #d4af37; border-radius: 10px;">
+                <h2 style="color: #d4af37;">Vielen Dank!</h2>
+                <p>Deine Nachricht ist sicher bei mir angekommen.</p>
+                <span style="font-size: 40px;">📧✨</span>
+            </div>
+        `;
+    } else {
+        // Fehler-Fall (z.B. Internet weg)
+        alert("Hoppla! Da ist was schiefgelaufen. Versuchs bitte nochmal.");
+    }
 });

@@ -1,16 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meine Behandlungen</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="auge">
-        <div class="pupille" id="pupille"></div>
-    </div>
+    <header class="main-header">
+    <div class="logo">ILLUMINA <span>AESTHETIC STUDIO</span></div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Behandlungen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</body>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hautpflege: <br><span>Luxus für Ihre Haut</span></h1>
+        <p>Erleben Sie exklusive Behandlungen in entspannter Atmosphäre.</p>
+        <a href="#kontakt" class="btn-gold">Jetzt Termin buchen</a>
+    </div>
+</section>
+
+<section class="services">
+    <h2>Unsere Behandlungen</h2>
+    
+    <div class="card-container">
+        
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+            <div class="card-content">
+                <h3>Nagelmodellage</h3>
+                <p>Kreative Kunst für Ihre Hände.</p>
+                <a href="#" class="btn">Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+            <div class="card-content">
+                <h3>PMU</h3>
+                <p>Perfektes Make-up, das bleibt.</p>
+                <a href="#" class="btn">Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+            <div class="card-content">
+                <h3>Hautanalyse</h3>
+                <p>Wissen, was Ihre Haut braucht.</p>
+                <a href="#" class="btn">Details</a>
+            </div>
+        </div>
+
+    </div> </section> </body>
 </html>
+<section id="kontakt" class="contact-section">
+    <div class="contact-container">
+        
+        <form action="https://formspree.io/f/maqllkry" method="POST" class="contact-form">
+    <h2>Kontakt aufnehmen</h2>
+    
+    <input type="text" name="name" placeholder="Name*" required>
+    
+    <input type="email" name="email" placeholder="E-Mail*" required>
+    
+    <textarea name="message" placeholder="Ihre Nachricht" rows="5" required></textarea>
+    
+    <label class="privacy-check">
+        <input type="checkbox" name="privacy" required> 
+        Ich bin damit einverstanden, dass meine Daten gespeichert werden.*
+    </label>
+    
+    <button type="submit" class="btn-gold">SENDEN</button>
+</form>
+
+        <div class="contact-info">
+            <h3>Illumina Aesthetic Studio</h3>
+            <p><strong>Telefon:</strong> 0176 1234567</p>
+            <p><strong>E-Mail:</strong> info@illumina-studio.de</p>
+            <p><strong>Adresse:</strong> Kaiserstraße 5, 77933 Lahr</p>
+            
+            <div class="social-links">
+                <a href="#">Instagram</a> | <a href="#">Facebook</a>
+            </div>
+        </div>
+
+    </div>
+</section>
