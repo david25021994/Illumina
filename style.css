@@ -263,3 +263,33 @@ nav a:hover {
     color: #d4af37;
     margin-bottom: 20px;
 }
+/* MOBILE ANPASSUNGEN (Handy) */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* Stapelt Logo und Navi übereinander */
+        height: auto; 
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 15px; /* Weniger Abstand zwischen Home, Behandlungen, Kontakt */
+    }
+
+    nav a {
+        font-size: 0.8rem; /* Schrift etwas kleiner, damit es passt */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Überschrift verkleinern, damit sie nicht bricht */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
