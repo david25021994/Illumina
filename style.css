@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&family=Great+Vibes&family=Cinzel:wght@600&display=swap');
+
+/* Reset & Globale Einstellungen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    background-image: url('marmor.jpg') !important;
+    background-repeat: repeat !important;
+    background-size: 600px auto !important;
+    background-attachment: fixed !important;
+    background-color: #e5d7c5 !important;
+}
+
+body, p, span, input, textarea, button, a {
+    font-family: 'Cinzel', serif !important;
+    color: #111111;
+}
+
+body {
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Header & Logo */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(255, 255, 255, 0.95) !important; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo a {
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: baseline !important;
+    gap: 12px !important;
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 2.8rem !important;
+    color: #1a1a1a !important;
+    font-weight: normal !important;
+}
+
+.logo span {
+    font-family: 'Cinzel', serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Cinzel', serif !important;
+    color: #c5a059 !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* Hero Sektion */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Titelbildaktuell1.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 4.5rem;
+    font-weight: normal;
+    text-transform: none;
+    color: #ffffff !important;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 4.5rem;
+    font-weight: normal;
+    text-transform: none;
+    display: block;
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.hero p {
+    font-family: 'Cinzel', serif !important;
+    font-size: 1.1rem;
+    color: white !important;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+}
+
+/* Goldene Buttons */
+.btn-gold, .btn, .map-overlay-button {
+    display: inline-block;
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 30%, #b38728 70%, #aa771c 100%) !important;
+    color: #111111 !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none !important;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-gold:hover, .btn:hover {
+    background: linear-gradient(135deg, #fcf6ba 0%, #bf953f 50%, #aa771c 100%) !important;
+    transform: translateY(-2px);
+}
+
+/* Services & Karten */
+.services {
+    scroll-margin-top: 80px;
+    padding: 100px 20px 60px;
+    background-color: transparent !important;
+    text-align: center;
+}
+
+.services h2 {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 4rem !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    margin-bottom: 40px;
+    color: #111111 !important;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.card {
+    background-color: rgba(253, 251, 247, 0.85) !important;
+    backdrop-filter: blur(5px);
+    width: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 0px #c5a059 !important; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 13px 13px 0px #c5a059 !important;
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    background-size: cover; 
+    background-position: center;
+}
+
+.card-content {
+    padding: 25px 20px;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #111111 !important;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #333333 !important;
+}
+
+/* Akkordeon */
+.services-accordion {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+}
+
+.accordion-title {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 3.5rem !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #111111 !important;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+    margin-bottom: 5px;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 18px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #111111;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.accordion-header:hover, .accordion-item.active .accordion-header {
+    color: #c5a059 !important;
+}
+
+.accordion-header i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px;
+}
+
+.accordion-content p {
+    padding: 15px 10px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Über uns */
+.about-section {
+    padding: 80px 10%;
+    background-color: transparent !important;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text .subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-section h2 {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 3.8rem !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    margin-bottom: 20px;
+    color: #111111 !important;
+}
+
+.about-text p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-text .signature {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 2.2rem;
+    color: #c5a059 !important;
+    margin-top: 20px;
+}
+
+.about-mood-image {
+    flex: 1;
+}
+
+.about-mood-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 12px 12px 0px #c5a059 !important;
+}
+
+/* Features */
+.features-divider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 10%;
+    background-color: transparent !important;
+    text-align: center;
+    gap: 30px;
+}
+
+.feature { flex: 1; }
+.feature .icon { display: block; font-size: 1.8rem; color: #c5a059 !important; margin-bottom: 10px; }
+.feature h3 { font-size: 0.95rem; margin-bottom: 8px; letter-spacing: 2px; }
+.feature p { font-size: 0.85rem; color: #444; }
+
+/* Stats */
+.stats-section { padding: 60px 10%; background-color: transparent !important; }
+.stats-container { display: flex; align-items: center; gap: 60px; max-width: 1200px; margin: 0 auto; }
+.stats-grid { flex: 1; display: grid; grid-template-columns: 1fr; gap: 30px; }
+.stat-box .number { display: block; font-size: 3.2rem; font-family: 'Great Vibes', cursive !important; color: #c5a059 !important; line-height: 1; margin-bottom: 5px; }
+.stat-box p { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; }
+.stats-image { flex: 1.2; position: relative; }
+
+/* Container zentrieren */
+.stats-section {
+    padding: 60px 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+}
+
+.stats-container {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Video sauber im 9:16 Format zentrieren */
+.stats-video {
+    width: 100% !important;
+    max-width: 800px !important; /* Begrenzt die Breite auf ein elegantes Maß */
+    height: auto !important;
+    aspect-ratio: 24 / 16 !important; /* Erzwingt Smartphone-Format ohne Verzerrung */
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    box-shadow: 12px 12px 0px #c5a059 !important;
+    .stats-section {
+    padding-top: 60px !important;
+    padding-bottom: 100px !important; /* Vergrößert den Abstand nach unten */
+    display: flex !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+}
+}
+
+
+/* Kontakt */
+.contact-section { background-color: #111111; color: #ffffff; padding: 80px 20px; }
+.contact-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; gap: 50px; flex-wrap: wrap; }
+.contact-form { display: flex; flex-direction: column; gap: 15px; max-width: 450px; flex: 1; }
+.contact-form h2 { color: #ffffff !important; margin-bottom: 10px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px; background-color: #222; border: 1px solid #444; color: white !important; border-radius: 4px; font-size: 0.85rem; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: #c5a059 !important; outline: none; }
+.privacy-check { font-size: 0.75rem; color: #bbb !important; display: flex; align-items: flex-start; gap: 10px; margin-top: 5px; cursor: pointer; }
+.privacy-check input { width: auto !important; margin-top: 2px; }
+
+.contact-info { flex: 1; min-width: 300px; line-height: 1.8; padding-top: 20px; }
+.contact-info h3 { color: #c5a059 !important; margin-bottom: 20px; }
+.contact-info p { color: #eeeeee !important; font-size: 0.85rem; }
+.contact-info strong { color: #ffffff !important; }
+.social-links { margin-top: 25px; display: flex; gap: 20px; }
+.social-links a { color: white !important; font-size: 1.3rem; transition: color 0.3s; }
+.social-links a:hover { color: #c5a059 !important; }
+
+/* Karte */
+.map-section-full { width: 100%; margin-top: 60px; overflow: hidden; }
+.map-container-full { position: relative; width: 100%; height: 450px; }
+.map-container-full iframe { width: 100%; height: 100%; display: block; filter: grayscale(15%) contrast(105%); }
+.map-overlay-button { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); pointer-events: none; white-space: nowrap; }
+
+/* Modals */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); z-index: 9999; display: none; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; }
+.modal-box { background: #fdfbf7; padding: 40px 30px; border-radius: 12px; max-width: 450px; width: 90%; position: relative; text-align: center; border: 1px solid #c5a059; }
+.modal-box h3 { font-size: 1.2rem; margin-bottom: 15px; color: #111; }
+.modal-box p { font-size: 0.9rem; color: #444; }
+.modal-close { position: absolute; top: 12px; right: 18px; font-size: 24px; color: #333; cursor: pointer; }
+
+/* Footer */
+.site-footer { padding: 40px 20px; text-align: center; background-color: transparent; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+.footer-container p { font-size: 0.75rem; color: #555; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 0.8rem !important; color: #c5a059 !important; text-decoration: none !important; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
+.footer-links a:hover { color: #111111 !important; }
+
+/* Responsive Ansicht */
+@media (max-width: 768px) {
+    .main-header { flex-direction: column; padding: 12px; }
+    .logo { margin-bottom: 10px; }
+    nav ul { gap: 15px; }
+    nav a { font-size: 0.75rem; letter-spacing: 2px; }
+    .hero h1, .hero h1 span { font-size: 3.2rem; }
+    .services h2, .accordion-title, .about-section h2 { font-size: 3rem !important; }
+    .about-container, .stats-container, .features-divider { flex-direction: column; gap: 40px; text-align: center; }
+    .about-text { text-align: center; }
+    .card { width: 100%; max-width: 340px; }
+}
+
+
+
+/* Erwirkt garantiert mehr Abstand unter dem Video */
+.stats-section {
+    margin-bottom: 80px !important;
+    padding-bottom: 60px !important;
+}
+
+.stats-video {
+    margin-bottom: 40px !important; /* Abstand unter dem Video inklusive Schatten */
+}

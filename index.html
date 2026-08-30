@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illumina Aesthetic Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Great+Vibes&family=Cinzel:wght@600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">Illumina <span>Aesthetic Studio</span></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Behandlungen</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hautpflege: <br><span>Luxus für Ihre Haut</span></h1>
+            <p>Erleben Sie exklusive Behandlungen in entspannter Atmosphäre.</p>
+            <a href="https://connect.shore.com/bookings/illumina-aesthetic-studio/services?locale=de" target="_blank" class="btn-gold">Jetzt Termin buchen</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Unsere Behandlungen</h2>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img" style="background-image: url('Nägel.jpg')"></div>
+                <div class="card-content">
+                    <h3>Nagelmodellage</h3>
+                    <p>Kreative Kunst für Ihre Hände.</p>
+                    <button type="button" onclick="openModal('details-nagel')" class="btn">Details</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('PMU.jpg')"></div>
+                <div class="card-content">
+                    <h3>PMU</h3>
+                    <p>Perfektes Make-up, das bleibt.</p>
+                    <button type="button" onclick="openModal('details-pmu')" class="btn">Details</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('Hautanalyse1.jpeg')"></div>
+                <div class="card-content">
+                    <h3>Hautanalyse</h3>
+                    <p>Wissen, was Ihre Haut braucht.</p>
+                    <button type="button" onclick="openModal('details-haut')" class="btn">Details</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('Hydrafacial.jpeg')"></div>
+                <div class="card-content">
+                    <h3>Hydrafacial</h3>
+                    <p>Intensive Reinigung, Feuchtigkeit und der besondere Glow.</p>
+                    <button type="button" onclick="openModal('details-hydrafacial')" class="btn">Details</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('Vektormassage.jpeg')"></div>
+                <div class="card-content">
+                    <h3>Vektor Gesichtsmassage</h3>
+                    <p>Natürliches Lifting – intensive Massage für mehr Kontur.</p>
+                    <button type="button" onclick="openModal('details-vektor')" class="btn">Details</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('Headspa1.jpeg')"></div>
+                <div class="card-content">
+                    <h3>Head Spa</h3>
+                    <p>Verwöhnende Pflege und Tiefenentspannung für Kopfhaut.</p>
+                    <button type="button" onclick="openModal('details-headspa')" class="btn">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-accordion">
+            <h3 class="accordion-title">Weitere Leistungen</h3>
+            
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">Maniküre & Fußpflege <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>• Klassische & Wellness Maniküre<br>• Fachgerechte Fußpflege & Hornhautentfernung<br>• Entspannende Hand- und Fußmassagen</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">Kosmetik & SPA <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>• Individuelle Gesichtsbehandlungen<br>• Intensive Wirkstoff-Masken & Peelings<br>• Dekolleté-Pflege & Nackenmassage</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">Augenbrauen & Wimpern Styling <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>• Wimpern- & Brow-Lifting (Laminierung)<br>• Professionelles Färben & Zupfen<br>• Individuelle Formberatung (Mapping)</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">Sugaring & Waxing <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>• Sanfte Haarentfernung mit Zuckerpaste oder Wachs<br>• Für Beine, Arme, Gesicht und empfindliche Zonen<br>• Hautberuhigende Nachpflege</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">Massagen <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>• Entspannende Ganzkörper- oder Teilmassagen<br>• Aromaöl-Behandlungen für die Sinne<br>• Stressabbau und Lockerung der Muskulatur</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button type="button" class="accordion-header">Specials & Upgrades <i class="fas fa-chevron-down"></i></button>
+                <div class="accordion-content">
+                    <p>• Spezialmasken & Wirkstoffampullen<br>• Kleine Extras für Augen & Lippen während der Behandlung</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="subtitle">Willkommen bei Illumina</span>
+                <h2>Ästhetik & Leidenschaft</h2>
+                <p>Bei Illumina Aesthetic Studio in Lahr steht Ihre natürliche Schönheit im Mittelpunkt. Wir glauben, dass wahre Ästhetik aus der Kombination von fachlicher Präzision und individueller Beratung entsteht.</p>
+                <p>Ob Permanent Make-up, professionelle Nagelmodellage oder modernste Hautanalyse – wir nehmen uns Zeit für Ihre Wünsche, um Ergebnisse zu schaffen, die perfekt zu Ihnen passen.</p>
+                <div class="signature">Ihr Illumina-Team</div>
+            </div>
+            <div class="about-mood-image">
+                <img src="Atmosphaere.jpg" alt="Studio Atmosphäre">
+            </div>
+        </div>
+    </section>
+
+    <section class="features-divider">
+        <div class="feature"><i class="icon">✦</i><h3>Premium Qualität</h3><p>Wir verwenden nur zertifizierte Produkte.</p></div>
+        <div class="feature"><i class="icon">✦</i><h3>Individuelle Beratung</h3><p>Jede Behandlung wird abgestimmt.</p></div>
+        <div class="feature"><i class="icon">✦</i><h3>Modernste Technik</h3><p>Innovation trifft auf Ästhetik.</p></div>
+    </section>
+
+   
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+            <div class="stats-image">
+                <video autoplay muted loop playsinline class="stats-video">
+                    <source src="Studioaufnahme.mp4" type="video/mp4">
+                    Ihr Browser unterstützt kein Video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="contact-section">
+        <div class="contact-container">
+            <form action="https://formsubmit.co/goerzen.illumina.aesthetic@web.de" method="POST" class="contact-form">
+                <h2>Kontakt aufnehmen</h2>
+                <input type="text" name="name" placeholder="Name*" required>
+                <input type="email" name="email" placeholder="E-Mail*" required>
+                <textarea name="message" placeholder="Ihre Nachricht" rows="5" required></textarea>
+                <label class="privacy-check">
+                    <input type="checkbox" name="privacy" required> 
+                    Ich bin damit einverstanden, dass meine Daten gespeichert werden.*
+                </label>
+                <button type="submit" class="btn-gold">SENDEN</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Illumina Aesthetic Studio</h3>
+                <p><strong>Telefon:</strong> 07821/922300</p>
+                <p><strong>E-Mail:</strong> goerzen.illumina.aesthetic@web.de</p>
+                <p><strong>Adresse:</strong> Kaiserstraße 5, 77933 Lahr</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/illuminaaesthetic_studio/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="map-section-full">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Kaiserstraße+5,77933+Lahr" target="_blank" class="map-link">
+            <div class="map-container-full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2653.210452331821!2d7.859664476885376!3d48.3372648372658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47912f2b61d743fd%3A0xc324a3017f343bbd!2sKaiserstra%C3%9Fe+5%2C+77933+Lahr%2FSchwarzwald!5e0!3m2!1sde!2sde!4v1713000000000!5m2!1sde!2sde" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="map-overlay-button">In Google Maps öffnen</div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Modals -->
+    <div id="details-nagel" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeModal('details-nagel')">&times;</span>
+            <h3>NAGELMODELLAGE</h3>
+            <p>Gepflegte Hände sind Ihre Visitenkarte.</p>
+        </div>
+    </div>
+
+    <div id="details-pmu" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeModal('details-pmu')">&times;</span>
+            <h3>PERMANENT MAKE-UP</h3>
+            <p>Wachen Sie jeden Morgen perfekt gestylt auf.</p>
+        </div>
+    </div>
+
+    <div id="details-haut" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeModal('details-haut')">&times;</span>
+            <h3>HAUTANALYSE</h3>
+            <p>Professionelle Analyse für Ihre optimale Hautpflege.</p>
+        </div>
+    </div>
+
+    <div id="details-hydrafacial" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeModal('details-hydrafacial')">&times;</span>
+            <h3>HYDRAFACIAL</h3>
+            <p>Tiefenreinigung und Pflege für einen strahlenden Teint.</p>
+        </div>
+    </div>
+
+    <div id="details-vektor" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeModal('details-vektor')">&times;</span>
+            <h3>VEKTOR GESICHTSMASSAGE</h3>
+            <p>Natürliches Lifting für definierte Konturen.</p>
+        </div>
+    </div>
+
+    <div id="details-headspa" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeModal('details-headspa')">&times;</span>
+            <h3>HEAD SPA</h3>
+            <p>Entspannung und Pflege für Kopfhaut und Geist.</p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; Illumina Aesthetic Studio. Alle Rechte vorbehalten.</p>
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="agb.html">AGB</a>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Steuerung
+        function openModal(id) {
+            var modal = document.getElementById(id);
+            if(modal) { 
+                modal.style.display = 'flex'; 
+                setTimeout(() => {
+                    modal.style.opacity = '1'; 
+                    modal.style.visibility = 'visible';
+                }, 10);
+            }
+        }
+        
+        function closeModal(id) {
+            var modal = document.getElementById(id);
+            if(modal) { 
+                modal.style.opacity = '0'; 
+                modal.style.visibility = 'hidden';
+                setTimeout(() => { modal.style.display = 'none'; }, 300);
+            }
+        }
+
+        // Accordion Toggle Steuerung
+        document.addEventListener('DOMContentLoaded', function() {
+            const accHeaders = document.querySelectorAll('.accordion-header');
+            accHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const item = this.parentElement;
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
