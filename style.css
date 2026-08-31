@@ -494,3 +494,39 @@ nav a:hover {
     z-index: 100 !important;
     text-decoration: none !important;
 }
+
+
+
+/* Fix für automatische Telefon-Links auf iPhones/Safari */
+.contact-info p, 
+.contact-info a[href^="tel"] {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+
+/* Erzwingt linksbündige Ausrichtung für alle Accordion-Titel */
+.accordion-header {
+    text-align: left !important;
+    justify-content: space-between !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+
+
+
+
+/* Stellt sicher, dass die Karte mobil sichtbar bleibt */
+.map-container-full {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 400px !important;
+    display: block !important;
+}
+
+.map-container-full iframe {
+    width: 100% !important;
+    min-height: 400px !important;
+}
