@@ -547,3 +547,18 @@ nav a:hover {
     border: 0 !important;
     display: block !important;
 }
+
+
+/* Stellt sicher, dass das Illumina-Logo auf iPhones & Android sichtbar ist */
+@media screen and (max-width: 768px) {
+    header .logo-container img,
+    header .logo img,
+    .logo img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        max-height: 45px !important; /* Passt die Logohöhe perfekt an den Mobil-Header an */
+        width: auto !important;
+        margin: 0 auto !important;
+    }
+}
