@@ -549,3 +549,96 @@ nav a:hover {
 }
 
 
+
+
+/* --- HEADER FINAL (Marmor + großes Logo) --- */
+body {
+    padding-top: 250px !important; /* gleich hoch wie der Header */
+}
+
+.main-header {
+    height: 250px !important;
+    padding: 0 5% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background-color: #f4f3f0 !important;
+    /* Marmor-Textur mit leichtem Weiß-Schleier darüber */
+    background-image:
+        linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
+        url('marmor.jpg') !important;
+    background-size: cover, cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
+}
+
+.logo,
+.logo a {
+    display: flex !important;
+    align-items: center !important;
+    background: transparent !important;
+}
+
+.logo img {
+    height: 200px !important;
+    max-height: 200px !important;
+    width: auto !important;
+    display: block !important;
+    mix-blend-mode: multiply !important; /* weißer Logo-Hintergrund verschwindet */
+}
+
+nav ul {
+    gap: 35px !important;
+}
+
+nav a {
+    color: #b38728 !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 3px !important;
+}
+
+@media (max-width: 768px) {
+    body { padding-top: 170px !important; }
+    .main-header {
+        height: auto !important;
+        flex-direction: column !important;
+        padding: 10px !important;
+    }
+    .logo img {
+        height: 140px !important;
+        max-height: 140px !important;
+    }
+}
+
+/* --- Kontakt-Info & Öffnungszeiten Fix --- */
+.contact-info p {
+    margin-bottom: 8px !important;
+    text-align: left !important;
+}
+
+.hours-block {
+    margin-top: 20px !important;
+}
+
+.hours-title {
+    margin-bottom: 10px !important;
+}
+
+.hours-row {
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 15px !important;
+    margin-bottom: 5px !important;
+}
+
+.hours-row .day {
+    display: inline-block !important;
+    width: 70px !important; /* Sorgt dafür, dass alle Uhrzeiten exakt untereinander stehen */
+    font-weight: 600 !important;
+    color: #ffffff !important;
+}
+
+.hours-row .time {
+    color: #eeeeee !important;
+}

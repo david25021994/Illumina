@@ -55,36 +55,3 @@ meinFormular.addEventListener('submit', async function(event) {
 
 
 
-/* Alle Überschriften in den rechtlichen Texten auf Schwarz umstellen */
-.legal-container h1,
-.legal-content h1,
-.legal-content h2,
-.legal-content h3,
-.legal-content h4 {
-    font-family: 'Cinzel', serif !important;
-    color: #111111 !important;
-    background: none !important;
-    -webkit-text-fill-color: #111111 !important;
-    text-shadow: none !important;
-}
-
-/* Hauptüberschrift (z.B. ALLGEMEINE GESCHÄFTSBEDINGUNGEN) */
-.legal-container h1 {
-    font-size: 2.2rem !important;
-    font-weight: 600 !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    text-align: center !important;
-    margin-top: 40px !important;
-    margin-bottom: 30px !important;
-}
-
-/* Abschnitts-Überschriften (z.B. 1. Geltungsbereich) */
-.legal-content h3 {
-    font-size: 1.1rem !important;
-    letter-spacing: 1.5px !important;
-    margin-top: 25px !important;
-    margin-bottom: 10px !important;
-    border-bottom: 1px solid #c5a059 !important; /* Dezenter goldener Trennstrich */
-    padding-bottom: 5px !important;
-}
