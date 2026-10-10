@@ -610,9 +610,9 @@ nav a {
     .logo img, 
     img.header-logo-full, 
     .header-logo-icon {
-        height: 60px !important;              /* Auf dem Handy etwas moderater, damit Platz bleibt */
-        max-height: 60px !important;
-        margin: 0 auto 10px auto !important;
+        height: 120px !important;              /* Auf dem Handy etwas moderater, damit Platz bleibt */
+        max-height: 120px !important;
+        margin: 0 auto 20px auto !important;
     }
 
     nav ul {
