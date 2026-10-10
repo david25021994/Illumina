@@ -599,31 +599,38 @@ nav a {
 }
 
 /* --- Perfekte Smartphone-Ansicht für den Header --- */
+/* --- Optimierte mobile Ansicht: Größeres Logo & sauberes Menü --- */
 @media (max-width: 768px) {
     .main-header {
         flex-direction: column !important;
         align-items: center !important;
-        padding: 10px 15px !important;
+        padding: 15px 10px 10px 10px !important;
         height: auto !important;
     }
 
     .logo img, 
     img.header-logo-full, 
     .header-logo-icon {
-        height: 120px !important;              /* Auf dem Handy etwas moderater, damit Platz bleibt */
-        max-height: 120px !important;
-        margin: 0 auto 20px auto !important;
+        height: 90px !important;              /* Macht das Logo wieder schön groß */
+        max-height: 90px !important;
+        width: auto !important;
+        margin: 0 auto 12px auto !important;
+        display: block !important;
     }
 
     nav ul {
+        display: flex !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 10px 15px !important;
+        gap: 8px 12px !important;             /* Gleichmäßige Abstände zwischen den Menüpunkten */
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     nav a {
-        font-size: 0.65rem !important;        /* Schrift kleiner, damit nichts am Rand abgeschnitten wird */
+        font-size: 0.75rem !important;        /* Gut lesbare Schriftgröße */
         letter-spacing: 1px !important;
+        font-weight: 600 !important;
     }
 }
 
