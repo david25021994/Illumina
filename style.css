@@ -665,3 +665,32 @@ nav a {
 .hours-row .time {
     color: #eeeeee !important;
 }
+
+
+
+/* --- Ultimativ schlanker Header & großes Logo --- */
+.main-header {
+    background-color: #f4f3f0 !important; /* Passt sich dem gekürzten Logobild an */
+    padding: 4px 5% !important;           /* Extrem schlanker Innenabstand */
+    height: 65px !important;              /* Deutlich verringerte Höhe */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+}
+
+.logo img, 
+img.header-logo-full, 
+.header-logo-icon {
+    height: 55px !important;              /* Optimal an 65px Header angepasst, da das Bild weniger Rand hat */
+    max-height: 55px !important;
+    width: auto !important;
+    display: block !important;
+    mix-blend-mode: multiply !important;   /* Entfernt den restlichen Kasten */
+    object-fit: contain !important;
+}
+
+/* Stellt sicher, dass das Inhalts-Padding für den flachen Header passt */
+body {
+    padding-top: 65px !important;
+}
